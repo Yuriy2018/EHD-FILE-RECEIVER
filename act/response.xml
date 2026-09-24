@@ -1,0 +1,65 @@
+<soap:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                       soap:mustUnderstand="1">
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:SignedInfo>
+                    <ds:CanonicalizationMethod
+                            Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:CanonicalizationMethod>
+                    <ds:SignatureMethod
+                            Algorithm="urn:ietf:params:xml:ns:pkigovkz:xmlsec:algorithms:gostr34102015-gostr34112015-512"></ds:SignatureMethod>
+                    <ds:Reference URI="#id-228ed517-a95a-4ef4-a8c6-9d87c9eef820">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:Transform>
+                        </ds:Transforms>
+                        <ds:DigestMethod
+                                Algorithm="urn:ietf:params:xml:ns:pkigovkz:xmlsec:algorithms:gostr34112015-512"></ds:DigestMethod>
+                        <ds:DigestValue>
+                            3eCXwecEySOsBzh9djm/LgN/BmNc6NdHeuN4NJANao8QLTKeZOqQtCdeSxpWvq5RXKHPRbO7lQtNs9g9OV5IFQ==
+                        </ds:DigestValue>
+                    </ds:Reference>
+                </ds:SignedInfo>
+                <ds:SignatureValue>
+                    o4/kRboXxHag/0eCQGGdSKSYqHwklc+V87RzNVRDFiJG73LS+L7Ek6XPwa06TDiaoTeTEGOx4I0H7KCAjnCZh6xV2QWSiUuTGUEzj+xb1uBAFRhl9qk6my+jN8fvU19y1t6edA72VEBffs9kOAdVVwFL1vKRZ83xM5qqUEBcsiw=
+                </ds:SignatureValue>
+                <ds:KeyInfo>
+                    <wsse:SecurityTokenReference>
+                        <ds:X509Data>
+                            <ds:X509IssuerSerial>
+                                <ds:X509IssuerName>C=KZ,CN=ҰЛТТЫҚ КУӘЛАНДЫРУШЫ ОРТАЛЫҚ (GOST) 2022</ds:X509IssuerName>
+                                <ds:X509SerialNumber>222774655763960374028314000936662821263911662140
+                                </ds:X509SerialNumber>
+                            </ds:X509IssuerSerial>
+                        </ds:X509Data>
+                    </wsse:SecurityTokenReference>
+                </ds:KeyInfo>
+            </ds:Signature>
+        </wsse:Security>
+    </soap:Header>
+    <soap:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+               wsu:Id="id-228ed517-a95a-4ef4-a8c6-9d87c9eef820">
+        <ns3:SendMessageResponse xmlns:ns3="http://bip.bee.kz/SyncChannel/v10/Types">
+            <response>
+                <responseInfo>
+                    <messageId>7c14f4f9-7c39-4f8a-a8f8-c9f5cc2e54f0</messageId>
+                    <responseDate>2026-09-15T10:24:29.798Z</responseDate>
+                    <status>
+                        <code>SCSS001</code>
+                        <message>Message has been processed successfully</message>
+                    </status>
+                </responseInfo>
+                <responseData>
+                    <data xmlns:ns4="http://mz.kz/exd/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xsi:type="ns4:ResponseFileMessage">
+                        <success>true</success>
+                        <message>Message has been processed successfully</message>
+                        <fileId>123</fileId>
+                        <eventId>55124d2a-f14f-4080-b001-70ddcaeb6b2b</eventId>
+                        <requestId>77fa1a4f-0ce1-4d2e-9cad-43aa8972edc9</requestId>
+                    </data>
+                </responseData>
+            </response>
+        </ns3:SendMessageResponse>
+    </soap:Body>
+</soap:Envelope>

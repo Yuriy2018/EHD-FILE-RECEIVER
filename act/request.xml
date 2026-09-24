@@ -1,0 +1,70 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                       soap:mustUnderstand="1">
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">\n
+                <ds:SignedInfo>\n<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                    <ds:SignatureMethod
+                            Algorithm="urn:ietf:params:xml:ns:pkigovkz:xmlsec:algorithms:gostr34102015-gostr34112015-512"/>
+                    \n
+                    <ds:Reference URI="#id-082163f0-3201-4909-9730-1243544924ce">\n
+                        <ds:Transforms>\n<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                        </ds:Transforms>
+                        \n<ds:DigestMethod
+                                Algorithm="urn:ietf:params:xml:ns:pkigovkz:xmlsec:algorithms:gostr34112015-512"/>
+                        \n<ds:DigestValue>FDWdvpo/9u2XTObMfIZMaDO/B139WfqnVFlD1OleCi+iwr6VKn17UsFz5LfI6qULBtiFjSkXLZB1&#13;\nOeVrvp4TTw==</ds:DigestValue>\n
+                    </ds:Reference>
+                    \n
+                </ds:SignedInfo>
+                \n<ds:SignatureValue>\nCERwSheC/dN65UtzNH+9uluMKh7bvYCGzPnlj8dNscabwMGiQhOKMRVI5SmMlU6LyPEPVZrErPEu&#13;\ntTkwRIsiY1k72+5pH+EcqvciM3CB5HkDVXRqDV1fIeMd7MBrB2cgLskbAUxw0M4JcbQrat8DXsTk&#13;\n7zS2GSwWUenU1HJuI+M=\n</ds:SignatureValue>\n
+                <ds:KeyInfo>\n
+                    <wsse:SecurityTokenReference>
+                        <wsse:KeyIdentifier
+                                EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+                                ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3">
+                            MIIE5TCCBE2gAwIBAgIUSKvLbOuJaXZvexoIoqU9QW6w0lwwDgYKKoMOAwoBAQIDAgUAMFgxSTBHBgNVBAMMQNKw0JvQotCi0KvSmiDQmtCj05jQm9CQ0J3QlNCr0KDQo9Co0Ksg0J7QoNCi0JDQm9Cr0pogKEdPU1QpIDIwMjIxCzAJBgNVBAYTAktaMB4XDTI2MDIyODA1NTczOFoXDTI3MDIyODA1NTczOFowggEaMR4wHAYDVQQDDBXQp9Ca0JDQndCe0JIg0K7QoNCY0JkxFTATBgNVBAQMDNCn0JrQkNCd0J7QkjEYMBYGA1UEBRMPSUlOODcwMjI4MzAwMjM4MQswCQYDVQQGEwJLWjGBhDCBgQYDVQQKDHrQotC+0LLQsNGA0LjRidC10YHRgtCy0L4g0YEg0L7Qs9GA0LDQvdC40YfQtdC90L3QvtC5INC+0YLQstC10YLRgdGC0LLQtdC90L3QvtGB0YLRjNGOICJEZWx0YS1TT0ZUICjQlNC10LvRjNGC0LAt0KHQntCk0KIpIjEYMBYGA1UECwwPQklOMjIwMzQwMDM0NTg1MRkwFwYDVQQqDBDQn9CV0KLQoNCe0JLQmNCnMIGsMCMGCSqDDgMKAQECAjAWBgoqgw4DCgEBAgIBBggqgw4DCgEDAwOBhAAEgYAUcFTnA9IA1PXW/rYkW2dtr89QWD8at5vKhXTb3brDDPlh2yY5GFicyckyo7NfIwu6eewlh0YiveCAGOs5boFyt4enOhHwnvG+RG37XeVv9AaKTLtK/hMgdm40WjVmyRsbS14U+QLfV6iQ2IYIQWVq4QXZDuID7d67lD4OnGRdBKOCAdcwggHTMA4GA1UdDwEB/wQEAwIDyDAoBgNVHSUEITAfBggrBgEFBQcDBAYIKoMOAwMEAQIGCSqDDgMDBAECATA4BgNVHSAEMTAvMC0GBiqDDgMDAjAjMCEGCCsGAQUFBwIBFhVodHRwOi8vcGtpLmdvdi5rei9jcHMwOAYDVR0fBDEwLzAtoCugKYYnaHR0cDovL2NybC5wa2kuZ292Lmt6L25jYV9nb3N0XzIwMjIuY3JsMDoGA1UdLgQzMDEwL6AtoCuGKWh0dHA6Ly9jcmwucGtpLmdvdi5rei9uY2FfZF9nb3N0XzIwMjIuY3JsMGgGCCsGAQUFBwEBBFwwWjAiBggrBgEFBQcwAYYWaHR0cDovL29jc3AucGtpLmdvdi5rejA0BggrBgEFBQcwAoYoaHR0cDovL3BraS5nb3Yua3ovY2VydC9uY2FfZ29zdF8yMDIyLmNlcjAlBgNVHREEHjAcgRpkZWx0YXNvZnQuZ2xvYmFsQGdtYWlsLmNvbTAdBgNVHQ4EFgQUSKvLbOuJaXZvexoIoqU9QW6w0lwwHwYDVR0jBBgwFoAU/jC+n8iQYz8f/1o8DLDIX0xtFwgwFgYGKoMOAwMFBAwwCgYIKoMOAwMFAQEwDgYKKoMOAwoBAQIDAgUAA4GBAAXOnEseiKW974JqsWweuErga5Lrbkowho7SbWLxBBhL4p0Vx8Onx/GJkd4in9MapyzuMfZ7boqZP6EMX8Kf+0ThyYTlnKbsagKKtqGTWU/QUXmj3GEFC9IRyXN1s1MWz4mGqm3j3gANsZ8csuSFFc8Jnwv+UFp9H7Y5sekj0rz3
+                        </wsse:KeyIdentifier>
+                    </wsse:SecurityTokenReference>
+                    \n
+                </ds:KeyInfo>
+                \n
+            </ds:Signature>
+        </wsse:Security>
+    </soap:Header>
+    <soap:Body wsu:Id="id-082163f0-3201-4909-9730-1243544924ce">
+        <SendMessage xmlns="http://bip.bee.kz/SyncChannel/v10/Types" xmlns:tns="http://mz.kz/exd/integration">
+            <request xmlns="">
+                <requestInfo>
+                    <messageId>5a67947a-4209-4e7a-b6cd-81bdc8581a53</messageId>
+                    <serviceId>EHD-FILE-RECEIVER</serviceId>
+                    <messageDate>2026-09-15T15:24:28</messageDate>
+                    <sender>
+                        <senderId>MEDLINE01</senderId>
+                        <password>5WIrWw_YeW</password>
+                    </sender>
+                    <sessionId>ff4ce11f-049f-4acf-9e27-823108d664d1</sessionId>
+                </requestInfo>
+                <requestData>
+                    <data xsi:type="tns:RequestMessage">
+                        <eventId>55124d2a-f14f-4080-b001-70ddcaeb6b2b</eventId>
+                        <login>medline</login>
+                        <password>Medline2026!</password>
+                        <fileId>123</fileId>
+                        <operationType>CREATE</operationType>
+                        <misId>35</misId>
+                        <sendDate>2026-09-14T10:23:20.455000+00:00</sendDate>
+                        <file>
+                            <content>123</content>
+                            <file_name>123</file_name>
+                            <ext>jpg</ext>
+                        </file>
+                        <signedData>123</signedData>
+                        <signature>123</signature>
+                    </data>
+                </requestData>
+            </request>
+        </SendMessage>
+    </soap:Body>
+</soap:Envelope>

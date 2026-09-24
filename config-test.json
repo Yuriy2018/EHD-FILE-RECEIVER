@@ -1,0 +1,13 @@
+{
+  "service": {
+    "port": "6063",
+    "login": "medline",
+    "password": "Medline2026!"
+  },
+  "test": true,
+  "shep_xml_signer": "http://shep-xml-signer:8080",
+  "smart_bridge": {
+    "test_url": "195.12.113.7",
+    "production_url": "195.12.113.29"
+  }
+}
